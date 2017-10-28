@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System.Threading;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +24,27 @@ namespace FirstIOT
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        ThreadPoolTimer _clockTimer = null;
+
         public MainPage()
         {
             this.InitializeComponent();
+            this.textBlock.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
+            _clockTimer = ThreadPoolTimer.CreatePeriodicTimer((source) =>
+            {
+                Dispatcher.RunAsync(CoreDispatcherPriority.High,
+                    () =>
+                    {
+                        Update();
+
+                    });
+            }, TimeSpan.FromMilliseconds(500));
         }
+
+        private void Update()
+        {
+            this.textBlock.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
+        }
+        
     }
 }
