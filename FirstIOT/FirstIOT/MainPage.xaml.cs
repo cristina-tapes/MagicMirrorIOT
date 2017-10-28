@@ -29,7 +29,8 @@ namespace FirstIOT
         public MainPage()
         {
             this.InitializeComponent();
-            this.textBlock.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
+            this.time.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
+            this.date.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("dddd d MMMM");
             _clockTimer = ThreadPoolTimer.CreatePeriodicTimer((source) =>
             {
                 Dispatcher.RunAsync(CoreDispatcherPriority.High,
@@ -43,7 +44,8 @@ namespace FirstIOT
 
         private void Update()
         {
-            this.textBlock.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
+            this.time.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
+            this.date.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("dddd d MMMM");
         }
         
     }

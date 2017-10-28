@@ -8,6 +8,14 @@
     mc:Ignorable="d" Height="1440" Width="900" IsHitTestVisible="False" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" UseLayoutRounding="False" BorderThickness="-2,0,0,0">
 
     <Grid Background="Black" RenderTransformOrigin="0,0" Margin="0" Height="1440" Width="900">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="362,687,0,0" TextWrapping="Wrap" Text="Hello Cristina" VerticalAlignment="Top" FontSize="30" Foreground="White"/>
+        <TextBlock x:Name="time" HorizontalAlignment="Left" Margin="46,130,0,0" TextWrapping="Wrap" Text="Hello Cristina" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
+        <TextBlock x:Name="date" HorizontalAlignment="Left" Margin="46,80,0,0" TextWrapping="Wrap" Text="Hello Cristina" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
+        <Grid HorizontalAlignment="Left" Height="332" Margin="0,1108,0,0" VerticalAlignment="Top" Width="880" Visibility="Collapsed">
+            <Image x:Name="imageDay1" HorizontalAlignment="Left" Height="128" Margin="10,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageDay2" HorizontalAlignment="Left" Height="128" Margin="197,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageDay3" HorizontalAlignment="Left" Height="128" Margin="384,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageDay4" HorizontalAlignment="Left" Height="128" Margin="571,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageDay5" HorizontalAlignment="Left" Height="128" Margin="752,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+        </Grid>
     </Grid>
 </Page>

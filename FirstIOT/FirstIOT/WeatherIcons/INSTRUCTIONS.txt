@@ -1,0 +1,5 @@
+put the file "backdrop.png" into the folder C:\Program Files\Stardock\ObjectDock\Docklets\Weather
+
+and all other files into C:\Program Files\Stardock\ObjectDock\Docklets\Weather\icons
+
+restart the dock, and that's it!

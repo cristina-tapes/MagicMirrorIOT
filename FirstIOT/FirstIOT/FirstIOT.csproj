@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{be126e36-e955-4443-9b6b-5bc36cde5895}</ProjectGuid>
+    <ProjectGuid>{BE126E36-E955-4443-9B6B-5BC36CDE5895}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FirstIOT</RootNamespace>
@@ -16,9 +16,7 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    
     <PackageCertificateKeyFile>FirstIOT_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -106,11 +104,59 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    
     <None Include="FirstIOT_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WeatherIcons\00.png" />
+    <Content Include="WeatherIcons\01.png" />
+    <Content Include="WeatherIcons\02.png" />
+    <Content Include="WeatherIcons\03.png" />
+    <Content Include="WeatherIcons\04.png" />
+    <Content Include="WeatherIcons\05.png" />
+    <Content Include="WeatherIcons\06.png" />
+    <Content Include="WeatherIcons\07.png" />
+    <Content Include="WeatherIcons\08.png" />
+    <Content Include="WeatherIcons\09.png" />
+    <Content Include="WeatherIcons\10.png" />
+    <Content Include="WeatherIcons\11.png" />
+    <Content Include="WeatherIcons\12.png" />
+    <Content Include="WeatherIcons\13.png" />
+    <Content Include="WeatherIcons\14.png" />
+    <Content Include="WeatherIcons\15.png" />
+    <Content Include="WeatherIcons\16.png" />
+    <Content Include="WeatherIcons\17.png" />
+    <Content Include="WeatherIcons\18.png" />
+    <Content Include="WeatherIcons\19.png" />
+    <Content Include="WeatherIcons\20.png" />
+    <Content Include="WeatherIcons\21.png" />
+    <Content Include="WeatherIcons\22.png" />
+    <Content Include="WeatherIcons\23.png" />
+    <Content Include="WeatherIcons\24.png" />
+    <Content Include="WeatherIcons\25.png" />
+    <Content Include="WeatherIcons\26.png" />
+    <Content Include="WeatherIcons\27.png" />
+    <Content Include="WeatherIcons\28.png" />
+    <Content Include="WeatherIcons\29.png" />
+    <Content Include="WeatherIcons\30.png" />
+    <Content Include="WeatherIcons\31.png" />
+    <Content Include="WeatherIcons\32.png" />
+    <Content Include="WeatherIcons\33.png" />
+    <Content Include="WeatherIcons\34.png" />
+    <Content Include="WeatherIcons\35.png" />
+    <Content Include="WeatherIcons\36.png" />
+    <Content Include="WeatherIcons\37.png" />
+    <Content Include="WeatherIcons\38.png" />
+    <Content Include="WeatherIcons\39.png" />
+    <Content Include="WeatherIcons\40.png" />
+    <Content Include="WeatherIcons\41.png" />
+    <Content Include="WeatherIcons\42.png" />
+    <Content Include="WeatherIcons\43.png" />
+    <Content Include="WeatherIcons\44.png" />
+    <Content Include="WeatherIcons\45.png" />
+    <Content Include="WeatherIcons\46.png" />
+    <Content Include="WeatherIcons\47.png" />
+    <Content Include="WeatherIcons\backdrop.png" />
+    <Content Include="WeatherIcons\NA.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -130,11 +176,9 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
-
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
