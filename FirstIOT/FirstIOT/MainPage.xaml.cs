@@ -24,29 +24,44 @@ namespace FirstIOT
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        ThreadPoolTimer _weatherTimer = null;
         ThreadPoolTimer _clockTimer = null;
 
         public MainPage()
         {
             this.InitializeComponent();
-            this.time.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
-            this.date.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("dddd d MMMM");
+            UpdateTime();
+            UpdateWeather();
             _clockTimer = ThreadPoolTimer.CreatePeriodicTimer((source) =>
             {
                 Dispatcher.RunAsync(CoreDispatcherPriority.High,
                     () =>
                     {
-                        Update();
+                        UpdateTime();
 
                     });
-            }, TimeSpan.FromMilliseconds(500));
+            }, TimeSpan.FromMilliseconds(1000));
+
+            _weatherTimer = ThreadPoolTimer.CreatePeriodicTimer((source) =>
+            {
+                Dispatcher.RunAsync(CoreDispatcherPriority.High,
+                    () =>
+                    {
+                        UpdateWeather();
+
+                    });
+            }, TimeSpan.FromMilliseconds(1000));
         }
 
-        private void Update()
+        private void UpdateTime()
         {
-            this.time.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("hh:mm:ss tt");
-            this.date.Text = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time")).ToString("dddd d MMMM");
+            var currentRegionTime = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("E. Europe Standard Time"));
+            this.time.Text = currentRegionTime.ToString("hh:mm tt");
+            this.date.Text = currentRegionTime.ToString("dddd d MMMM");
+            this.year.Text = currentRegionTime.ToString("yyyy");
         }
+
+        private void UpdateWeather() { }
         
     }
 }
