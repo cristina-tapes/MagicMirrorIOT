@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstIOT", "FirstIOT\FirstIOT.csproj", "{BE126E36-E955-4443-9B6B-5BC36CDE5895}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicMirror", "MagicMirror\MagicMirror.csproj", "{BE126E36-E955-4443-9B6B-5BC36CDE5895}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
