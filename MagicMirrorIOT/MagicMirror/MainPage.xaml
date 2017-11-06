@@ -12,11 +12,13 @@
         <TextBlock x:Name="date" HorizontalAlignment="Left" Margin="110,364,0,0" TextWrapping="Wrap" Text="Sunday 1 January" VerticalAlignment="Top" FontSize="40" Foreground="White" FontFamily="Arial Unicode MS"/>
         <TextBlock x:Name="year" HorizontalAlignment="Left" Margin="110,411,0,0" TextWrapping="Wrap" Text="2017" VerticalAlignment="Top" FontSize="30" Foreground="White" FontFamily="Arial Unicode MS"/>
         <Grid HorizontalAlignment="Left" Height="332" Margin="0,1108,0,0" VerticalAlignment="Top" Width="880" Visibility="Collapsed">
-            <Image x:Name="imageDay1" HorizontalAlignment="Left" Height="128" Margin="10,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
-            <Image x:Name="imageDay2" HorizontalAlignment="Left" Height="128" Margin="197,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
-            <Image x:Name="imageDay3" HorizontalAlignment="Left" Height="128" Margin="384,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
-            <Image x:Name="imageDay4" HorizontalAlignment="Left" Height="128" Margin="571,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
-            <Image x:Name="imageDay5" HorizontalAlignment="Left" Height="128" Margin="752,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageWeatherDay1" HorizontalAlignment="Left" Height="128" Margin="10,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageWeatherDay2" HorizontalAlignment="Left" Height="128" Margin="197,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageWeatherDay3" HorizontalAlignment="Left" Height="128" Margin="384,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageWeatherDay4" HorizontalAlignment="Left" Height="128" Margin="571,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
+            <Image x:Name="imageWeatherDay5" HorizontalAlignment="Left" Height="128" Margin="752,82,0,0" VerticalAlignment="Top" Width="128" Stretch="Fill" Source="WeatherIcons/28.png"/>
         </Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="767,300,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="40" Foreground="White" FontFamily="Arial Unicode MS" RenderTransformOrigin="0.562,0.578"/>
+        <Image x:Name="imageWeatherCurrentConditions" HorizontalAlignment="Left" Height="80" Margin="672,290,0,0" VerticalAlignment="Top" Width="80" Stretch="Fill" Source="WeatherIcons/28.png"/>
     </Grid>
 </Page>

@@ -17,7 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>MagicMirror_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>6601F2001D83349BE21F09D6AD1661EABA3CF600</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>633A1B298ECDFE899F6C077CAD641FE507C5C7CA</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -96,10 +96,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CurrentCondition.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Metric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Root.cs" />
+    <Compile Include="Temperature.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -108,6 +112,7 @@
     <None Include="MagicMirror_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Weather.txt" />
     <Content Include="WeatherIcons\00.png" />
     <Content Include="WeatherIcons\01.png" />
     <Content Include="WeatherIcons\02.png" />

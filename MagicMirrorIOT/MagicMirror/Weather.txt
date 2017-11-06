@@ -1,0 +1,21 @@
+[
+  {
+    "LocalObservationDateTime": "2017-11-05T22:05:00+02:00",
+    "EpochTime": 1509912300,
+    "WeatherText": "Clear",
+    "WeatherIcon": 33,
+    "IsDayTime": false,
+    "Temperature": {
+      "Metric": {
+        "Value": 2.2,
+        "Unit": "C",
+        "UnitType": 17
+      },
+      "Imperial": {
+        "Value": 36.0,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    }
+  }
+]

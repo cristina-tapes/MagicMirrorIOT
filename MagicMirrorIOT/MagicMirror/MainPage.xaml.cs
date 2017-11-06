@@ -1,7 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Threading.Tasks;
 using Windows.System.Threading;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,7 +33,6 @@ namespace MagicMirror
                     () =>
                     {
                         UpdateTime();
-
                     });
             }, TimeSpan.FromMilliseconds(1000));
 
@@ -36,9 +42,8 @@ namespace MagicMirror
                     () =>
                     {
                         UpdateWeather();
-
                     });
-            }, TimeSpan.FromMilliseconds(1000));
+            }, TimeSpan.FromHours(1));
         }
 
         private void UpdateTime()
@@ -49,7 +54,20 @@ namespace MagicMirror
             this.year.Text = currentRegionTime.ToString("yyyy");
         }
 
-        private void UpdateWeather() { }
-        
+        private async void UpdateWeather()
+        {
+            WebRequest request = WebRequest.Create(@"http://dataservice.accuweather.com/currentconditions/v1/287713?apikey=WSLi9zcgj8ag9qhEc6Zgd05YpN3jR5oA&details=true&_=1509913114456");
+            request.Method = "GET";
+            using (var response = (HttpWebResponse)(await Task<WebResponse>.Factory.FromAsync(request.BeginGetResponse, request.EndGetResponse, null)))
+            {
+                Stream stream = response.GetResponseStream();
+                var result = new StreamReader(stream).ReadToEnd();
+                var currentConditions = JsonConvert.DeserializeObject<List<CurrentCondition>>(result);
+                this.textBlock.Text = Math.Round(currentConditions[0].Temperature.Metric.Value) + "\u2103";
+                var tempUri = @"ms-appx:///WeatherIcons/" + currentConditions[0].WeatherIcon + ".png";
+                this.imageWeatherCurrentConditions.Source = new BitmapImage(new Uri(tempUri, UriKind.Absolute));
+            }
+        }
+
     }
 }
